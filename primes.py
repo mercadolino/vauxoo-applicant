@@ -29,7 +29,7 @@ class PrimeClass(object):
 
         if num_int < 2:
             return False
-        for el in islice(count(2), int(sqrt(num_int))):
+        for el in islice(count(2), int(sqrt(num_int)-1)):
             if not num_int % el:
                 return False
         return True
