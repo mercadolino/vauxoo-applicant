@@ -3,6 +3,12 @@
 --       You can create database locally to test it.
 --       Consider add ';' at end sentence.
 
+CREATE TABLE employee_department(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR (50) UNIQUE NOT NULL,
+  descr text
+);
+
 CREATE TABLE employee(
   id serial PRIMARY KEY,
   first_name VARCHAR (50) NOT NULL,
@@ -13,12 +19,6 @@ CREATE TABLE employee(
       ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (id_boss) REFERENCES employee
       ON DELETE CASCADE ON UPDATE CASCADE,
-);
-
-CREATE TABLE employee_department(
-  id SERIAL PRIMARY KEY,
-  name VARCHAR (50) UNIQUE NOT NULL,
-  descr text
 );
 
 CREATE TABLE employee_hobby(
