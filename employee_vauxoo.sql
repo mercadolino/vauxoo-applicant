@@ -6,7 +6,7 @@
 CREATE TABLE employee_department(
   id SERIAL PRIMARY KEY,
   name VARCHAR (50) UNIQUE NOT NULL,
-  descr text
+  descriptioniption text
 );
 
 CREATE TABLE employee(
@@ -25,7 +25,7 @@ CREATE TABLE employee_hobby(
 
   id SERIAL PRIMARY KEY,
   name VARCHAR (50) UNIQUE NOT NULL,
-  descr text
+  description text
 );
 
 CREATE TABLE employee_hobby_ref(
@@ -41,21 +41,21 @@ CREATE TABLE employee_hobby_ref(
   PRIMARY KEY (id_employee, id_employee_hobby)
 );
 
-INSERT INTO employee_department (name,descr) VALUES ('HR', 'descr1');
-INSERT INTO employee_department (name,descr) VALUES ('Agricoltura', 'descr2');
-INSERT INTO employee_department (name,descr) VALUES ('Amministrazione', 'descr3');
-INSERT INTO employee_department (name,descr) VALUES ('Acquisti', 'descr4');
-INSERT INTO employee_department (name,descr) VALUES ('Vendite', 'descr5');
-INSERT INTO employee_department (name,descr) VALUES ('Marketing', 'descr6');
+INSERT INTO employee_department (name,description) VALUES ('HR', 'description1');
+INSERT INTO employee_department (name,description) VALUES ('Agricoltura', 'description2');
+INSERT INTO employee_department (name,description) VALUES ('Amministrazione', 'description3');
+INSERT INTO employee_department (name,description) VALUES ('Acquisti', 'description4');
+INSERT INTO employee_department (name,description) VALUES ('Vendite', 'description5');
+INSERT INTO employee_department (name,description) VALUES ('Marketing', 'description6');
 
 INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Demian', 'Rihs','4','1');
 INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Francesco', 'Apagno','1','1');
 INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Mark', 'Baumann','2','1');
 INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Francesco', 'Prova','3','1');
 
-INSERT INTO employee_hobby (name,descr) VALUES ('Photography', 'Love to take pictures');
-INSERT INTO employee_hobby (name,descr) VALUES ('Astronomy', 'Love to observe the night sky');
-INSERT INTO employee_hobby (name,descr) VALUES ('Hiking', 'Love to climb mountains');
+INSERT INTO employee_hobby (name,description) VALUES ('Photography', 'Love to take pictures');
+INSERT INTO employee_hobby (name,description) VALUES ('Astronomy', 'Love to observe the night sky');
+INSERT INTO employee_hobby (name,description) VALUES ('Hiking', 'Love to climb mountains');
 
 INSERT INTO employee_hobby_ref (id_employee,id_employee_hobby) VALUES ('1','1');
 INSERT INTO employee_hobby_ref (id_employee,id_employee_hobby) VALUES ('1','2');
