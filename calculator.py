@@ -1,16 +1,21 @@
 """
-Your module documentation here
+Calculador de suma
 """
+__version__ = '1.0'
+__author__ = 'Demian Rihs'
 
 
 class CalculatorClass(object):
     """
-    Your class documentation here
+    Esta classe genera un objecto con un metodo sum()
+    que retorna la suma de una lista de nr
     """
+
+    def _init_(self, num_list):
+        self.num_list = num_list
 
     def sum(self, num_list):
         """
-        Your method documentation here
+        El metodo sum ya esta implementado en python
         """
-        # your sum code here
-        return "not implement yet"  # Remove this dummy line
+        return sum(num_list)
