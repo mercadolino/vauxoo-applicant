@@ -18,7 +18,7 @@ CREATE TABLE employee(
   FOREIGN KEY (id_department) REFERENCES employee_department
       ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (id_boss) REFERENCES employee
-      ON DELETE CASCADE ON UPDATE CASCADE,
+      ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE employee_hobby(
@@ -48,10 +48,10 @@ INSERT INTO employee_department (name,descr) VALUES ('Acquisti', 'descr4');
 INSERT INTO employee_department (name,descr) VALUES ('Vendite', 'descr5');
 INSERT INTO employee_department (name,descr) VALUES ('Marketing', 'descr6');
 
-INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Demian', 'Rihs','4','2');
-INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Francesco', 'Apagno','1','2');
-INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Mark', 'Baumann','2','2');
-INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Francesco', 'Prova','3','2');
+INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Demian', 'Rihs','4','1');
+INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Francesco', 'Apagno','1','1');
+INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Mark', 'Baumann','2','1');
+INSERT INTO employee (first_name, last_name, id_department, id_boss) VALUES ('Francesco', 'Prova','3','1');
 
 INSERT INTO employee_hobby (name,descr) VALUES ('Photography', 'Love to take pictures');
 INSERT INTO employee_hobby (name,descr) VALUES ('Astronomy', 'Love to observe the night sky');

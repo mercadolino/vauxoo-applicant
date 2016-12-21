@@ -15,9 +15,6 @@ class PrimeClass(object):
     que retorna True cuando la variabile tiene un nr primo
     """
 
-    def _init_(self, num_int):
-        self.num_int = num_int
-
     def is_prime(self, num_int):
         """
         itertools tiene una manera eficiente de utilizar rangos
